@@ -1,2 +1,1 @@
-## Experiment name
-Interface motor using relay with Raspberry Pi
+## Interface motor using relay with Raspberry Pi
