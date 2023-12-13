@@ -4,65 +4,56 @@
 * If you connect the orange cable to the upper slot the operation will be ON/OFF.
 * Once you turn the Raspberry on, the red light on the relay should light up. The green light will only light up if the relay is activated.
 
-Software:
+#### Software:
 On the Raspberry open the terminal and use the following codes:
-* sudo apt-get update
-* sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
-
-Installation Of Python:
-* Ensure your Raspberry Pi is running the latest version of all the software. Run the following two commands on your Raspberry Pi to update it.
+```
 sudo apt-get update
-sudo apt-get upgrade
-* Install the python 2.7 dev package:
-Sudo apt-get install python2.7-dev
-* Execution of Motor:Open the terminal on the Raspberry and type:
-sudo nano moto.py
+sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+```
 
-Python code:
+#### Installation Of Python:
+1. Ensure your Raspberry Pi is running the latest version of all the software. Run the following two commands on your Raspberry Pi to update it.
+``` sudo apt-get update
+    sudo apt-get upgrade
+```
+2. Install the python 2.7 dev package:
+```
+    sudo apt-get install python2.7-dev
+```
+3. Execution of Motor:Open the terminal on the Raspberry and type:
+```  
+    sudo nano moto.py
+```
+#### Python code:
 
     import RPi.GPIO as GPIO
     import time
-    channel = 21
-    #GPIO setup
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(channel, GPIO.OUT, initial=GPIO.HIGH)
 
-    def motor_on(pin):
+    # Set up GPIO
+     GPIO.setmode(GPIO.BCM)
+     GPIO.setup(relay_pin, GPIO.OUT)
 
-    GPIO.output(pin, GPIO.LOW)  # Turn motor on
+    # Function to turn on the motor
+     def turn_on_motor():
+        GPIO.output(relay_pin, GPIO.HIGH)
+        print("Motor ON")
 
-    def motor_off(pin):
-
-
-    GPIO.output(pin, GPIO.HIGH)  # Turn motor off
-
-
-    if __name__ == '__main__':
-
+    # Function to turn off the motor
+     def turn_off_motor():
+        GPIO.output(relay_pin, GPIO.LOW)
+        print("Motor OFF")
 
     try:
+         # Set the GPIO pin for the relay
+         relay_pin = 17 
 
-
-        motor_on(channel)
-
-
-        print("ON")
-
-
-        time.sleep(5)
-
-
-        motor_off(channel)
-
-
-        print("OFF")
-
-
-        GPIO.cleanup()
-
+        # Main loop
+        while True:
+                turn_on_motor()
+                time.sleep(5)  # Run the motor for 5 seconds
+                turn_off_motor()
+                time.sleep(2)  # Wait for 2 seconds before turning on again
 
     except KeyboardInterrupt:
-
-
-        GPIO.cleanup()
-
+        # Clean up GPIO on keyboard interrupt
+         GPIO.cleanup()
