@@ -1,0 +1,29 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is GPIO used for?",
+      "answers": {
+        "a": "Perform digital input or output functions",
+        "b": "To receive analogue input",
+        "c": "Record humidity",
+        "d": "Record Temperature"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the Ethernet/LAN cable used in RPi?",
+      "answers": {
+        "a": "Cat5",
+        "b": "RJ45",
+        "c": "Cat5e",
+        "d": "Cat6"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
