@@ -12,3 +12,6 @@
  3. Relay Switch 
  4. Breadboard
  5. 9V battery
+* Connection Diagram Basics - To interface a DC motor with a Raspberry Pi using a relay, the relay acts as an intermediary switch. The Raspberry Pi’s GPIO pin (e.g., GPIO17) connects to the relay’s input (control) pin to activate the coil, while the relay’s output (normally open, NO, and common, COM) terminals connect the DC motor to an external power source, such as a 9V battery. The relay’s ground is tied to the Raspberry Pi’s GND, and the motor circuit remains isolated from the Raspberry Pi’s low-voltage system, protecting it from high current demands.
+
+* Working Principle - The working principle involves the Raspberry Pi sending a HIGH (3.3V) or LOW (0V) signal via its GPIO pin to the relay’s coil. When the GPIO pin outputs HIGH, the relay coil energizes, closing the switch and completing the motor’s circuit with the 9V battery, causing the motor to run. When the GPIO pin outputs LOW, the coil de-energizes, opening the switch and stopping the motor. This setup leverages the relay’s ability to isolate and control high-power devices with the Raspberry Pi’s low-power logic signals.
