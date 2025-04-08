@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "A relay is a ___ switch?",
+      "answers": {
+        "a": "An electronic",
+        "b": "A mechanical",
+        "c": "An electromechanical",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "What is the purpose of the relay in a DC motor circuit?",
+      "answers": {
+        "a": "To provide power to the motor",
+        "b": "To act as a switch controlled by the Raspberry Pi",
+        "c": "To limit the current to the motor",
+        "d": "To increase the voltage to the motor"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which Raspberry Pi pin is typically used to power a relay module like in this experiment?",
+      "answers": {
+        "a": "GND",
+        "b": "5V",
+        "c": "3.3V",
+        "d": "GPIO 21"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the experiment, what does the GPIO pin connected to the relay do?",
+      "answers": {
+        "a": "Supplies constant power to the relay",
+        "b": "Sends a signal to turn the relay on or off",
+        "c": "Grounds the relay circuit",
+        "d": "Monitors the motor’s speed"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What component provides the power to run the DC motor in this setup?",
+      "answers": {
+        "a": "Raspberry Pi",
+        "b": "Relay",
+        "c": "Battery",
+        "d": "GPIO pin"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does the 'NO' pin on the relay stand for?",
+      "answers": {
+        "a": "Normally Open",
+        "b": "No Output",
+        "c": "Negative Output",
+        "d": "Normally On"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+   
+  ]
+}
