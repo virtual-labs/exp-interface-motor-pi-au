@@ -17,6 +17,7 @@ Review the provided instructions thoroughly, then proceed with the circuit assem
 1. **Update the Raspberry Pi**: Open the terminal and ensure the system is up-to-date by running:
 
 #### Installation Of Python:
+
 1. Ensure your Raspberry Pi is running the latest version of all the software. Run the following two commands on your Raspberry Pi to update it.
 ``` sudo apt-get update
     sudo apt-get upgrade
@@ -30,7 +31,7 @@ Review the provided instructions thoroughly, then proceed with the circuit assem
     sudo nano moto.py
 ```
 #### Python code:
-
+```
     import RPi.GPIO as GPIO
     import time
 
@@ -62,3 +63,4 @@ Review the provided instructions thoroughly, then proceed with the circuit assem
     except KeyboardInterrupt:
         # Clean up GPIO on keyboard interrupt
          GPIO.cleanup()
+```
