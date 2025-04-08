@@ -1,17 +1,17 @@
 ### Procedure
-
-1. Read the given instructions carefully and begin the circuit connection by referring to the provided circuit diagram.
-2. **Connect the Relay to the Raspberry Pi**:
+#### Hardware Setup:
+Review the provided instructions thoroughly, then proceed with the circuit assembly as outlined in the accompanying circuit diagram.
+1. **Connect the Relay to the Raspberry Pi**:
    - Connect the **3.3V pin** (Physical Pin 1) of the Raspberry Pi to the **VCC pin** of the relay to supply power.
    - Connect a **GND pin** (e.g., Physical Pin 9) of the Raspberry Pi to the **GND pin** of the relay to complete the control circuit.
    - Connect **GPIO21** (Physical Pin 40) of the Raspberry Pi to the **Input pin** of the relay to control its switching.
-3. **Connect the Relay to the Motor and Battery**:
+2. **Connect the Relay to the Motor and Battery**:
    - Connect the **COM (Common) pin** of the relay to the **positive (+ve) terminal** of the 9V battery (voltage source).
    - Connect the **NO (Normally Open) pin** of the relay to the **positive (+ve) terminal** of the DC motor.
    - Connect the **negative (-ve) terminal** of the 9V battery to the **negative (-ve) terminal** of the DC motor to complete the motor circuit.
-4. **Verify Connections**: Double-check all connections to ensure they are accurate and securely wired.
-5. After completing the connections, click the "Code" button and then click the "Submit" button 
-6. Ensure the circuit works correctly and matches the diagram.
+3. **Verify Connections**: Double-check all connections to ensure they are accurate and securely wired.
+4. After completing the connections, click the "Code" button and then click the "Submit" button 
+5. Ensure the circuit works correctly and matches the diagram.
 
 #### Software Setup:
 1. **Update the Raspberry Pi**: Open the terminal and ensure the system is up-to-date by running:

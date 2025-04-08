@@ -1,17 +1,60 @@
 ### Theory
 
-* DC motor - Any of a group of rotating electric motors that use direct current (DC) electricity to create mechanical energy is referred to as a DC motor. The most prevalent kinds depend on the forces created by induced magnetic fields brought on by current flowing through the coil. For a portion of the motor's current to sometimes shift direction, almost all types of DC motors contain an internal mechanism that is either electromechanical or electronic.
+Controlling external electrical devices such as **DC motors** through a microcontroller like the **Raspberry Pi** requires safe interfacing methods. One such approach involves the use of a **relay switch**—an electrically operated switch that isolates and manages high-power components using low-power signals from the Raspberry Pi. This experiment focuses on demonstrating how to use a relay module to control a DC motor from the Raspberry Pi's GPIO pins.
 
-* Relay switch - The electro-mechanical relay is a type of output device (actuator) that may be used in a wide variety of electrical circuits. It is available in a wide variety of forms, sizes, and designs. But even if electrical relays may be used to turn relatively high currents or voltages "ON" or "OFF" in low power electronic or computer type circuits, a relay switch circuit must be employed to do so.The advantage of relays is that it takes a relatively small amount of power to operate the relay coil. However, a relay switch circuit can be used to control motors, heaters, lamps or AC circuits which themselves can draw a lot more electrical voltage, current and therefore power.
 
-* Bread Board - Temporary circuits are constructed using a breadboard, often known as a plugblock. Designers may quickly remove and change components because to its usefulness. It is helpful for someone who wants to construct a circuit to show how it works before reusing the parts in another Circuit.
 
-#### Components:
- 1. Raspberry Pi 3
- 2. DC motor
- 3. Relay Switch 
- 4. Breadboard
- 5. 9V battery
-* Connection Diagram Basics - To interface a DC motor with a Raspberry Pi using a relay, the relay acts as an intermediary switch. The Raspberry Pi’s GPIO pin (e.g., GPIO17) connects to the relay’s input (control) pin to activate the coil, while the relay’s output (normally open, NO, and common, COM) terminals connect the DC motor to an external power source, such as a 9V battery. The relay’s ground is tied to the Raspberry Pi’s GND, and the motor circuit remains isolated from the Raspberry Pi’s low-voltage system, protecting it from high current demands.
+#### Components and Their Functions
 
-* Working Principle - The working principle involves the Raspberry Pi sending a HIGH (3.3V) or LOW (0V) signal via its GPIO pin to the relay’s coil. When the GPIO pin outputs HIGH, the relay coil energizes, closing the switch and completing the motor’s circuit with the 9V battery, causing the motor to run. When the GPIO pin outputs LOW, the coil de-energizes, opening the switch and stopping the motor. This setup leverages the relay’s ability to isolate and control high-power devices with the Raspberry Pi’s low-power logic signals.
+#### 1. Raspberry Pi
+
+- Acts as the main controller in this experiment.  
+- Sends GPIO signals to the relay module based on the control logic.  
+- Operates at 3.3V logic level, which is compatible with most relay modules.  
+- Cannot directly drive high-current devices like motors, so it relies on the relay for switching.
+
+  <div><img src="./images/raspberry.png" alt="Raspberry Pi" width="40%"></div>
+
+#### 2. DC Motor
+- A rotary electrical machine that converts **electrical energy into mechanical rotation**.  
+- Operates on the principle that a **current-carrying conductor in a magnetic field experiences a force**, producing motion.  
+- Used here as the output device, powered by an external source and activated through the relay.  
+- Common in robotics, automation, and electronics for its simplicity and ease of control.  
+
+  <div><img src="./images/dc.png" alt="DC Motor" width="40%"></div>
+
+#### 3. Relay Module (5V)
+- An **electromechanical switch** that uses a small electrical signal to control a higher-powered circuit.  
+- It uses a GPIO pin on the Raspberry Pi to activate its internal switch.  
+- Provides **electrical isolation** and safely controls the **motor’s higher voltage**, protecting the Raspberry Pi.  
+- This module allows control over the DC motor's power supply using logic signals.  
+
+  <div><img src="./images/relay.jpg" alt="Relay Module" width="40%"></div>
+
+#### 4. 9V Battery
+- Provides an **external power source** for the DC motor, preventing the Raspberry Pi from bearing the current load.  
+- Powers the motor when the relay closes the circuit.  
+
+  <div><img src="./images/9v.jpg" alt="9V Battery" width="30%"></div>
+
+
+
+#### Explanation of Each Connection
+
+1. Connect the Relay to the Raspberry Pi
+- Connect the **3.3V pin** (Physical Pin 1) of the Raspberry Pi to the **VCC pin** of the relay to supply power.  
+- Connect a **GND pin** (e.g., Physical Pin 9) of the Raspberry Pi to the **GND pin** of the relay to complete the control circuit.  
+- Connect **GPIO21** (Physical Pin 40) of the Raspberry Pi to the **Input pin** of the relay to control its switching mechanism.
+
+ 2. Connect the Relay to the Motor and Battery
+- Connect the **COM (Common) pin** of the relay to the **positive (+)** terminal of the **9V battery**.  
+- Connect the **NO (Normally Open) pin** of the relay to the **positive (+)** terminal of the **DC motor**.  
+- Connect the **negative (-)** terminal of the 9V battery to the **negative (-)** terminal of the DC motor to complete the motor circuit.
+
+3. Verify Connections
+- Double-check all physical connections to ensure accuracy, polarity, and proper wire placement.  
+- Ensure the breadboard layout matches the circuit diagram.
+
+ 4. Software Execution
+- After completing all the wiring, click the **“Code”** button followed by the **“Submit”** button in the software interface (if applicable).  
+- This will trigger the GPIO logic to activate the relay and control the motor.

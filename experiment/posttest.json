@@ -7,23 +7,65 @@
         "a": "Perform digital input or output functions",
         "b": "To receive analogue input",
         "c": "Record humidity",
-        "d": "Record Temperature"
+        "d": "Record temperature"
       },
-      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the Ethernet/LAN cable used in RPi?",
+      "question": "What is the Ethernet/LAN cable used in Raspberry Pi?",
       "answers": {
         "a": "Cat5",
         "b": "RJ45",
         "c": "Cat5e",
         "d": "Cat6"
       },
-      
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which module is used to control a high-voltage motor with Raspberry Pi?",
+      "answers": {
+        "a": "Bluetooth module",
+        "b": "Wi-Fi module",
+        "c": "Relay module",
+        "d": "GPIO extender"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which programming language is commonly used to control GPIO pins in Raspberry Pi?",
+      "answers": {
+        "a": "C",
+        "b": "Java",
+        "c": "Python",
+        "d": "SQL"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which GPIO pin configuration is commonly used to send control signals to a relay module?",
+      "answers": {
+        "a": "Analog output",
+        "b": "Digital input",
+        "c": "Digital output",
+        "d": "PWM input"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the function of a relay in Raspberry Pi-based motor control?",
+      "answers": {
+        "a": "Amplifies signal",
+        "b": "Converts digital to analog",
+        "c": "Switches high-power devices using low-power signals",
+        "d": "Measures voltage levels"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
