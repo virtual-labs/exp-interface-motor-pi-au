@@ -2,67 +2,67 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is GPIO used for?",
+      "question": "Why is a relay used instead of directly connecting a DC motor to Raspberry Pi GPIO pins?",
       "answers": {
-        "a": "Perform digital input or output functions",
-        "b": "To receive analogue input",
-        "c": "Record humidity",
-        "d": "Record temperature"
+        "a": "Relays make the motor run faster",
+        "b": "GPIO pins cannot supply enough current to run the motor directly",
+        "c": "Relays reduce the voltage requirement for motors",
+        "d": "Relays convert AC to DC power"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "What is the Ethernet/LAN cable used in Raspberry Pi?",
+      "question": "What type of signal is typically sent from the Raspberry Pi to control a relay module?",
       "answers": {
-        "a": "Cat5",
-        "b": "RJ45",
-        "c": "Cat5e",
-        "d": "Cat6"
+        "a": "High-voltage AC signal",
+        "b": "Low-voltage digital signal",
+        "c": "PWM analog signal",
+        "d": "Serial communication signal"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Which module is used to control a high-voltage motor with Raspberry Pi?",
+      "question": "In motor control applications, what is the role of the flyback diode in the relay circuit?",
       "answers": {
-        "a": "Bluetooth module",
-        "b": "Wi-Fi module",
-        "c": "Relay module",
-        "d": "GPIO extender"
+        "a": "Prevents reverse current from damaging components",
+        "b": "Increases relay switching speed",
+        "c": "Supplies additional voltage to the motor",
+        "d": "Converts AC to DC"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "intermediate"
     },
     {
-      "question": "Which programming language is commonly used to control GPIO pins in Raspberry Pi?",
+      "question": "Which of the following is an advantage of using a relay module with a DC motor?",
       "answers": {
-        "a": "C",
-        "b": "Java",
-        "c": "Python",
-        "d": "SQL"
+        "a": "Allows isolation between control and power circuits",
+        "b": "Increases the GPIO pin voltage",
+        "c": "Reduces motor speed automatically",
+        "d": "Provides continuous power without switching"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If a 5V relay module is connected to a Raspberry Pi, which GPIO state usually activates the relay?",
+      "answers": {
+        "a": "Logic HIGH (3.3V)",
+        "b": "Logic LOW (0V)",
+        "c": "PWM at 50% duty cycle",
+        "d": "Alternating HIGH and LOW"
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "Which GPIO pin configuration is commonly used to send control signals to a relay module?",
+      "question": "What happens if a DC motor is connected without a proper relay or driver circuit?",
       "answers": {
-        "a": "Analog output",
-        "b": "Digital input",
-        "c": "Digital output",
-        "d": "PWM input"
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "What is the function of a relay in Raspberry Pi-based motor control?",
-      "answers": {
-        "a": "Amplifies signal",
-        "b": "Converts digital to analog",
-        "c": "Switches high-power devices using low-power signals",
-        "d": "Measures voltage levels"
+        "a": "Motor will run normally",
+        "b": "Motor may overheat but Raspberry Pi will be safe",
+        "c": "Raspberry Pi GPIO pins may get damaged due to high current",
+        "d": "The relay will fail to switch"
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
