@@ -4,7 +4,7 @@
 <b>Discipline | <b>Computer Science and Engineering
 :--|:--|
 <b> Lab | <b> Internet of Things (IoT) 
-<b> Experiment|     <b> To interface motor using relay with Raspberry Pi
+<b> Experiment|     <b> Raspberry Pi Motor Control with Relay
 
 ### About the Experiment 
 
