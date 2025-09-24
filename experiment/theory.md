@@ -12,7 +12,7 @@ Controlling external electrical devices such as **DC motors** through a microcon
 - Operates at 3.3V logic level, which is compatible with most relay modules.  
 - Cannot directly drive high-current devices like motors, so it relies on the relay for switching.
 
-  <div><img src="./images/raspberry.png" alt="Raspberry Pi" width="40%"></div>
+  <div><img src="./images/raspberry.png" alt="Raspberry Pi" width="30%"></div>
 #### 2. DC Motor
 - A rotary electrical machine that converts **electrical energy into mechanical rotation**.  
 - Operates on the principle that a **current-carrying conductor in a magnetic field experiences a force**, producing motion.  
