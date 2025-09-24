@@ -1,4 +1,4 @@
-### Procedure
+
 #### Hardware Setup:
 Review the provided instructions thoroughly, then proceed with the circuit assembly as outlined in the accompanying circuit diagram.
 1. **Connect the Relay to the Raspberry Pi**:
