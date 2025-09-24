@@ -1,4 +1,3 @@
-### Theory
 
 Controlling external electrical devices such as **DC motors** through a microcontroller like the **Raspberry Pi** requires safe interfacing methods. One such approach involves the use of a **relay switch**—an electrically operated switch that isolates and manages high-power components using low-power signals from the Raspberry Pi. This experiment focuses on demonstrating how to use a relay module to control a DC motor from the Raspberry Pi's GPIO pins.
 
@@ -21,7 +20,7 @@ Controlling external electrical devices such as **DC motors** through a microcon
 - **Working**: When current flows through the motor’s windings, it creates a magnetic field that interacts with the permanent magnets (or field windings), producing a torque that rotates the motor shaft. The speed and direction can be controlled by varying the voltage and polarity.  
 - Common in robotics, automation, and electronics for its simplicity and ease of control.  
 
-<div><img src="./images/dc.png" alt="DC Motor" width="40%"></div>
+<div><img src="./images/dc.png" alt="DC Motor" width="25%"></div>
 
 #### 3. Relay Module (5V)
 - An **electromechanical switch** that uses a small electrical signal to control a higher-powered circuit.  
@@ -30,13 +29,13 @@ Controlling external electrical devices such as **DC motors** through a microcon
 - **Working**: When the Raspberry Pi outputs a HIGH signal to the relay’s control pin, it energizes an internal coil, creating a magnetic field. This pulls a metal contact to close (or open) the circuit connected to the motor, allowing or cutting off current flow.  
 - This module allows control over the DC motor's power supply using logic signals.  
 
-<div><img src="./images/relay.jpg" alt="Relay Module" width="40%"></div>
+<div><img src="./images/relay.jpg" alt="Relay Module" width="20%"></div>
 
 #### 4. 9V Battery
 - Provides an **external power source** for the DC motor, preventing the Raspberry Pi from bearing the current load.  
 - Powers the motor when the relay closes the circuit.  
 
-  <div><img src="./images/9v.jpg" alt="9V Battery" width="30%"></div>
+  <div><img src="./images/9v.jpg" alt="9V Battery" width="10%"></div>
 
 
 
